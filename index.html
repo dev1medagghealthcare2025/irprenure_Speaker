@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRPRENEUR Speaker Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"><img src="medagg-logo.png" alt="IRPRENEUR logo" /></div>
+        <div class="titles">
+          <h1>IRPRENEUR</h1>
+          <p>Speaker Registration</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2 class="card-title">Register as a Speaker</h2>
+        <p class="card-subtitle">Please fill in your details below. All fields are required.</p>
+
+        <form id="registrationForm" novalidate>
+          <div class="grid">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+              <small class="error" data-error-for="name"></small>
+            </div>
+
+            <div class="form-field">
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" placeholder="City" required />
+              <small class="error" data-error-for="city"></small>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required />
+              <small class="error" data-error-for="email"></small>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" required />
+              <small class="error" data-error-for="phone"></small>
+            </div>
+
+            <div class="form-field">
+              <label for="organization">Organization</label>
+              <input id="organization" name="organization" type="text" placeholder="Company / Institution" required />
+              <small class="error" data-error-for="organization"></small>
+            </div>
+
+            <div class="form-field">
+              <label for="designation">Designation</label>
+              <input id="designation" name="designation" type="text" placeholder="Role / Title" required />
+              <small class="error" data-error-for="designation"></small>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="submitBtn" type="submit" class="btn btn-primary">
+              <span class="btn-label">Submit Registration</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+            <button id="resetBtn" type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card info">
+        <h3>About IRPRENEUR</h3>
+        <p>
+          Interventional radiology (IR) is an emerging field of modern medicine that provides non-surgical treatment options to a number of health conditions which otherwise need surgery. With the awareness about such procedures increasing in this digitally connected world and with the obvious choice of patients to prefer non-surgical treatment options, this is a field that is poised for phenomenal growth in the coming years.
+        </p>
+        <p>
+          IRpreuner is an attempt to bring together an aspiring group of IR professionals who are taking the lead in terms of increasing awareness about these non-surgical procedures. It is an intense one day workshop that combines latest concepts from practice, finance and technology.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> IRPRENEUR. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
